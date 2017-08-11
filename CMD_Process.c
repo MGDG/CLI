@@ -10,8 +10,8 @@
 
 #include "CMD_Process.h"
 
-#define CMD_MAXPARANUM 		20					//支持的最大参数个数(包括命令在内)
-#define CMD_STRLEN 			512					//命令字符串的最大长度(包括参数在内)
+#define CMD_MAXPARANUM 		20				//支持的最大参数个数(包括命令在内)
+#define CMD_STRLEN 		512				//命令字符串的最大长度(包括参数在内)
 
 static void CMDHandle_hello(uint8_t paranum,const char *para[]);
 static void CMDHandle_Help(uint8_t paranum,const char *para[]);
@@ -20,8 +20,8 @@ static void CMDHandle_cmdtest(uint8_t paranum,const char *para[]);
 //结构体定义
 static const struct
 {
-	const char *cmd_name;									//命令字符串
-	const char *cmd_help;									//命令帮助信息
+	const char *cmd_name;					//命令字符串
+	const char *cmd_help;					//命令帮助信息
 	void (*cmd_handle)(uint8_t paranum,const char *para[]);	//回调函数定义
 }CMD_List[]=
 {
